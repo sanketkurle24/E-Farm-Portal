@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>market E FARM PORTAL </title>
+	<link rel="stylesheet" type="text/css" href="../static/digital_market_style.css">
+</head>
+<body>
+	<div class="wrapper">
+      <nav class="navbar">
+        <!-- <h1> E FARM PORTAL</h1> -->
+        <ul>
+          <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+          <li><a href="{{url_for('about_us')}}">ABOU US</a></li>
+          <li><a href="{{url_for('login')}}">LOGIN</a></li>
+           
+		  
+        </ul>
+		
+		  
+      </nav>
+     </div>
+	<!-- <h1><i class=" fa fa-shopping-cart"></i></h1> -->
+	<section>
+		
+		
+		{% for user in myproducts %}
+			<div class="item">
+				<figure>          
+				<img style="width: 150; height: 220px; ", src = "{{url_for('file',filename=user.profile_image)}} ">
+				<figcaption><B>Name:{{user.product_name}} <br> prize:{{user.product_prize}}</B><br>
+
+					<button>Add-cart</button>
+
+					<a href="{{url_for('transaction')}}">
+					<button style="background-color: green;">BUY NOW</button> </a>
+					
+				</figcaption>
+				</figure>
+			</div>
+ 		{% endfor %}
+			
+		
+		
+	</section>
+
+	<div class="select">
+		
+	</div>
+	
+	
+</body>
+
+</html>

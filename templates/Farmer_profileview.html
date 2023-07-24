@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/Farmer_profileview.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title> Profile ViewE FARM PORTAL </title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- <h1> E FARM PORTAL</h1> -->
+        <ul>
+          <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+          <li><a href="{{url_for('about_us')}}">ABOUT US</a></li>
+          <li><a href="{{url_for('digital_market')}}">DIGITAL MARKET</a></li>
+         <li> <a href="{{url_for('logout' )}}"> LOGOUT</a> </li>
+          
+
+        </ul>
+      </nav> 
+    {% block body %}
+    <div class="card">
+        <img src="../static/team_image/profile_image.jpg" alt="name" style="width:100%">EMAIL : {{email}}<br> <br>
+       USERNAME : {{username}} <br> <br> PHONE : {{phone}} <br>  
+        
+         
+    
+    </div>
+       <a href="{{url_for('Farmer_updateProfile')}}"> <button class="button button1">UPDATE PROFILE</button></a>
+       <a href="{{url_for('upload_product')}}">  <button class="button button2">UPLOAD PRODUCT</button></a>
+       <a href="{{url_for('delete_product')}}">  <button class="button button3">DELETE PRODUCT</button></a>
+       <a href="{{url_for('view_product' )}}"> <button class="button button4">VIEW PRODUCT</button></a>
+      
+    {% endblock %}
+</body>
+</body>
+</html>

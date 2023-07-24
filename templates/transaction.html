@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TRANSACTION</title>
+	<link rel="stylesheet" type="text/css" href="../static/transaction.css">
+</head>
+<body>
+  {% block body %}
+  <nav class="navbar">
+    <!-- <h1> E FARM PORTAL</h1> -->
+    <ul>
+      <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+      
+      
+      
+      <li><a href="{{url_for('digital_market')}}">BACK</a></li>
+      
+      
+
+    </ul>
+  </nav>
+  <div class="logininbox">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h1>TRANSACTION</h1>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form" method="post" >
+          <input type="text"  name="email" placeholder="email"/>
+          
+          <input type="text"  name="fullname" placeholder="fullname"/>
+          <input type="text" name="phone" placeholder="phone"/>
+          <input type="text" name="city" placeholder="city"/>
+          <input type="text" name="state" placeholder="state"/>
+          <input type="text" name="pincode" placeholder="pincode"/>
+          <button> COFIRM ORDER </button>
+          
+        </form>
+{% endblock %}
+</body>
+</html>

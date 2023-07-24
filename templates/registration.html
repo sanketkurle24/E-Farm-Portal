@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/registration_style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title> Registration E FARM PORTAL </title>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- <h1> E FARM PORTAL</h1> -->
+    <ul>
+      <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+      <li><a href="{{url_for('about_us')}}">ABOUT US</a></li>
+  
+      
+      <li><a href="{{url_for('digital_market')}}">DIGITAL MARKET</a></li>
+      
+      
+
+    </ul>
+  </nav>
+  <div class="container"></div>
+  <div class="registrationbox">
+      <div class="form">
+        <div class="registration">
+          <div class="registration-header">
+            <h1>REGISTER HERE</h1>
+           
+          </div>
+        </div>
+        <form class="registration-form" method='POST'>
+          <input type="text" name="fullname"placeholder="fullname" required="required" />
+          <input type="text" name="username"placeholder="username" required="required" />
+          <input type="email" name="email" placeholder="email"  />
+          <input type="text" name="phone"placeholder="phone number"  />
+          <input type="password" name="password" placeholder="password" />
+          <input type="text" name="address" placeholder="address"  />
+          <br>
+          <p>Categories: </p>
+          <input type="checkbox" name="myCheckbox" value="1" onclick="selectOnlyThis(this)" /> Farmer
+          <input type="checkbox" name="myCheckbox" value="2" onclick="selectOnlyThis(this)"/> Buyer
+          <br>
+          <br>
+          <button type ="submit"> register</button>
+          <!-- <p>{{message1}}</p>    -->
+        <br>
+          <p class="message">Already registered? <a href="{{url_for('login')}}">Login</a></p>
+          <br>
+        </form>
+        
+      </div>
+
+
+      
+    </div>
+    <script type="text/javascript">
+      function selectOnlyThis(id){
+  var myCheckbox = document.getElementsByName("myCheckbox");
+  Array.prototype.forEach.call(myCheckbox,function(el){
+    el.checked = false;
+  });
+  id.checked = true;
+}
+    </script>
+    
+</body>
+</body>
+</html>

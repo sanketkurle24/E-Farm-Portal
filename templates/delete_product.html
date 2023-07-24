@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete </title>
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/delete.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="navbar">
+      <!-- <h1> E FARM PORTAL</h1> -->
+      <ul>
+        <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+        
+        
+        
+        <li><a href="{{url_for('digital_market')}}">DIGITAL MARKET</a></li>
+        <li><a href="{{url_for('Farmer_profileview')}}">BACK</a></li>
+        
+
+      </ul>
+    </nav>
+	<br>
+		
+ <div class="container">
+	
+ 	<div class="header">
+		{% if error %}
+	
+		<h3 style="margin-left:15% ; color: red;" class="error"><strong>Error:</strong>{{ error }}</h3>
+  {% endif %}
+  {% if message %}
+	  
+		<h3 style="margin-left:15% ; color: blue;" class="message"><strong>Message:</strong> {{ message }}</h3>>
+  {% endif %}
+ 		<h1>Delete Product</h1>
+ 	</div>
+ 	<div class="main">
+ 		<form method="post" autocomplete="off">
+ 			<span>
+				<input type="text" name="product_name" placeholder="Enter product name" required="require"> <br>
+ 			</span><br>
+ 			
+ 				<button>DELETE</button>
+
+ 		</form>
+ 	</div>
+ </div>
+
+
+</body>>
+</html>

@@ -1,0 +1,143 @@
+body{
+    
+  background: url(login_back.jpg);
+  
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+
+}
+.navbar{
+position: fixed;
+height: 100px;
+width: 100%;
+min-width: 0%;
+top: 0;
+left: 0;
+background: rgba(0,0,0,0.4);
+}
+.wrapper{
+
+background-size: cover;
+height: 150vh;
+}
+.navbar{
+position: fixed;
+height: 90px;
+width: 100%;
+min-width: 0%;
+top: 0;
+left: 0;
+
+}
+.navbar .logo{
+width: 140px;
+height: auto;
+padding: 20px 100px;
+}
+.navbar ul{
+float: right;
+margin-right: 20px;
+}
+.navbar ul li{
+list-style: none;
+margin: 0 8px;
+display: inline-block;
+line-height: 80px;
+min-width: 0%;
+}
+.navbar ul li a{
+font-size: 20px;
+font-family: 'Roboto', sans-serif;
+color: white;
+padding: 6px 13px;
+text-decoration: none;
+transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+background:slategray;
+border-radius: 2px;
+}
+
+.logininbox{
+   width: 320px;
+   height: 700px;
+   background: #000;
+   color: #fff;
+   top: 80%;
+   left: 50%;
+   
+   position: absolute;
+   transform: translate(-50%,-50%);
+   box-sizing: border-box;
+   padding: 70px 30px;
+}
+h1{
+   margin: 0;
+   padding: 0 0 20px;
+   text-align: center;
+   font-size: 30px;
+}
+.logininbox p{
+   margin: 0;
+   padding: 0;
+   font-weight: bold;
+}
+.logininbox input{
+   width: 100;
+   margin-bottom: 30px;
+
+}
+ .logininbox input[type="text"], input[type="password"]
+{
+   border: none;
+   border-bottom: 1px solid #fff;
+   background: transparent;
+   outline: none;
+   height: 40px;
+   color: #fff;
+   font-size: 18px;
+}
+
+ .logininbox input[type="submit"]
+{
+   border: none;
+   outline: none;
+   height: 40px;
+   background: #fb2525;
+   color: #ffff;
+   font-size: 18px;
+   border-radius: 20px;
+}
+
+.logininbox input[type="submit"]:hover
+{
+   cursor: pointer;
+   background: #ffc107;
+   color: #000;
+  
+}
+
+.logininbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #35f323;
+}
+
+.logininbox a:hover
+{
+    color: #ffc107;
+}
+.logininbox button{
+  border: none;
+  outline: none;
+  
+  height: 40px;
+  background: blue;
+  color: #ffff;
+  font-size: 18px;
+  border-radius: 0px;
+  width: 80%;
+}

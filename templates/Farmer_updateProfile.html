@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../static/registration_style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title> UPDATE PROFILE </title>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- <h1> E FARM PORTAL</h1> -->
+    <ul>
+      <li><a class="active" href="home.html">HOME</a></li>
+      <li><a href="{{url_for('digital_market')}}">DIGITAL MARKET</a></li>
+      <li><a href="{{url_for('Farmer_profileview')}}">BACK</a></li>
+      
+
+    </ul>
+  </nav>
+  <div class="container"></div>
+  <div class="registrationbox">
+      <div class="form">
+        <div class="registration">
+          <div class="registration-header">
+            <h1>UPDATE PROFILE</h1>
+           
+          </div>
+        </div>
+
+
+	{% if error %}
+	<p class="error"><strong>ERROR:</strong> {{ error }}
+	{% endif %}
+	{% if message %}
+	<p class="error"><strong>Message:</strong> {{ message }}
+	{% endif %}
+	<form class="registration-form"  method="post" autocomplete="off">
+			<input type="text" name="email"   placeholder="Enter email" required="require"> 
+			<br> <br>
+			<input type="text" name="phone"   placeholder="Enter new phone" > <br> <br>
+			<input type="text" name="username"   placeholder="Enter new username" > <br><br>
+			<input type="text" name="password"   placeholder="Enter new password" > <br><br>
+			<input type="text" name="address"   placeholder="Enter new address" > <br><br>
+			<br>
+			<b><input type="submit"  value="upadate Profile"> </b> 
+
+			
+
+	</form>
+</div>
+</div>
+</body>>
+</html>
